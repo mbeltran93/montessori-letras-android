@@ -76,7 +76,7 @@ fun HomeScreen(
             columns = GridCells.Adaptive(minSize = 88.dp),
             horizontalArrangement = Arrangement.spacedBy(12.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp),
-            modifier = Modifier.fillMaxSize()
+            modifier = Modifier.fillMaxSize().testTag("letters_grid")
         ) {
             items(uiState.letters, key = { it.letter.char }) { card ->
                 val color = CardPalette[card.letter.char.code % CardPalette.size]
