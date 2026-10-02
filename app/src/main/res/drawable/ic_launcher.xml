@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Simple launcher icon: a warm sun-yellow circle behind a big rounded "Aa",
+     echoing the colorful letter cards used throughout the app. -->
+<vector xmlns:android="http://schemas.android.com/apk/vector"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#FFC947"
+        android:pathData="M54,8 C78.2,8 98,27.8 98,52 C98,76.2 78.2,96 54,96 C29.8,96 10,76.2 10,52 C10,27.8 29.8,8 54,8 Z" />
+    <path
+        android:fillColor="#2D2A32"
+        android:pathData="M38,66 L47,34 L59,34 L68,66 L59.5,66 L57.8,59 L48.2,59 L46.5,66 Z M50,52 L56,52 L53,40 Z" />
+</vector>
