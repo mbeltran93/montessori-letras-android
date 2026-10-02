@@ -8,6 +8,7 @@ import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onAllNodesWithContentDescription
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.performClick
+import androidx.compose.ui.test.performScrollTo
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import org.junit.Rule
 import org.junit.Test
@@ -68,7 +69,9 @@ class LetrasFlowInstrumentedTest {
     @Test
     fun elGridMuestraLas27LetrasDelAbecedarioEnEspanol() {
         composeTestRule.onNodeWithTag("letter_card_A").assertExists()
-        composeTestRule.onNodeWithTag("letter_card_Ñ").assertExists()
-        composeTestRule.onNodeWithTag("letter_card_Z").assertExists()
+        composeTestRule.onNodeWithTag("letter_card_Ñ").performScrollTo().assertExists()
+        // La "Z" es la ultima tarjeta del grid: hace falta scrollear para
+        // que el LazyVerticalGrid la componga antes de poder verificarla.
+        composeTestRule.onNodeWithTag("letter_card_Z").performScrollTo().assertExists()
     }
 }
